@@ -18,7 +18,11 @@ const _routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    SubjectsComponent,
+    ChaptyersComponent,
+    SectionsComponent
+  ],
   imports: [
     CommonModule,
     RouterModule.forChild(_routes),
