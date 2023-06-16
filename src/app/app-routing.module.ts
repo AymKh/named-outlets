@@ -9,12 +9,8 @@ import { SubjectsComponent } from './nestedViws/subjects/subjects.component';
 const routes: Routes = [
   { path: 'about', component: AboutComponent },
   {
-    path: 'grid', component: GridComponent,
-    children: [
-      { path: '', pathMatch: 'full', component: SectionsComponent, outlet: 'secondaryoutlet' },
-      { path: 'chapters', pathMatch: 'full', component: ChaptyersComponent, outlet: 'secondaryoutlet' },
-      { path: 'subjects', pathMatch: 'full', component: SubjectsComponent, outlet: 'secondaryoutlet' },
-    ]
+    path: 'grid',
+    loadChildren: () => import('./modules/grid/grid.module').then(m => m.GridModule)
   },
 ];
 
