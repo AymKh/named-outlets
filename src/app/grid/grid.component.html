@@ -1,0 +1,14 @@
+<hr>
+<h1>GRID PAGE</h1>
+<section id="grid">
+    <div id="sidebar">
+        <ul>
+            <li><a [routerLink]="'/grid'">SECTIONS</a></li>
+            <li><a [routerLink]="['/grid', {outlets: {'secondaryoutlet': ['chapters']}}]">CHAPTERS</a></li>
+            <li><a [routerLink]="['/grid', {outlets: {'secondaryoutlet': ['subjects']}}]">SUBJECTS</a></li>
+        </ul>
+    </div>
+    <div id="view">
+        <main> <router-outlet name="secondaryoutlet"></router-outlet></main>
+    </div>
+</section>
